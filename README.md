@@ -136,7 +136,8 @@ npx uri-scheme open exp://192.168.0.7:19000/--/checkout/congrats --android
 In case of running a **prebuild** of the application, you should verify that the deep link for Android has been configured in the `android/app/src/main/AndroidManifest.xml` file. The deep link must be between the activity tags.
 
 ```AndroidManifest.xml
-<activity ....> ....
+<activity ....> 
+....
 <intent-filter data-generated="true">
     <action android:name="android.intent.action.VIEW"/>
     <data android:scheme="myapp" android:host="checkout" android:pathPrefix="/congrats"/> 
