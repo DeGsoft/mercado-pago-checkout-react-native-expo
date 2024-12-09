@@ -1,15 +1,27 @@
-import { Text, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import {
+    StyleSheet,
+    Button,
+    View
+} from "react-native";
+import { openBrowserAsync } from "expo-web-browser";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+    <View style={styles.container}>
+        <Button
+            title="Open Browser"
+            onPress={() => openBrowserAsync('https://www.civeloo.com')}
+        />
+        <StatusBar style="auto" />
+    </View>);
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+});
