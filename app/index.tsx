@@ -1,27 +1,18 @@
-import { StatusBar } from "expo-status-bar";
-import {
-    StyleSheet,
-    Button,
-    View
-} from "react-native";
-import { openBrowserAsync } from "expo-web-browser";
+import ExpoWebBrowserExample from "@/components/expo-web-browser-example";
+import { Text, View } from "react-native";
 
 export default function Index() {
+  const URL_PREFERENCE = 'https://www.youtube.com/@degsoft';
   return (
-    <View style={styles.container}>
-        <Button
-            title="Open Browser"
-            onPress={() => openBrowserAsync('https://www.civeloo.com')}
-        />
-        <StatusBar style="auto" />
-    </View>);
-}
-
-const styles = StyleSheet.create({
-    container: {
+    <View
+      style={{
         flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
         justifyContent: "center",
-    },
-});
+        alignItems: "center",
+      }}
+    >
+      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <ExpoWebBrowserExample url={URL_PREFERENCE} />
+    </View>
+  );
+}
