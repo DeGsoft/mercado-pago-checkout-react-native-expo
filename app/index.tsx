@@ -2,7 +2,6 @@ import ExpoWebBrowserExample from "@/components/expo-web-browser-example";
 import { Text, View } from "react-native";
 
 export default function Index() {
-  const URL_PREFERENCE = 'https://www.youtube.com/@degsoft';
   return (
     <View
       style={{
@@ -11,8 +10,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-      <ExpoWebBrowserExample url={URL_PREFERENCE} />
+      <Text>Mercado Pago Checkout Pro React Native Expo</Text>
+      <ExpoWebBrowserExample />
     </View>
   );
 }
